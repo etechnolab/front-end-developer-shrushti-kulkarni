@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Google Form Assignment</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<div class="container">
+		<div class="col-sm-12 row">
+			<div class="col-sm-2"></div>
+			<div class="col-sm-8">
+				<form name="myForm" onsubmit="return validateForm()">
+					<div class="panel panel-default">
+					  <div class="panel-body header">
+					    <h2>Assignment /Task page</h2>
+					    <p>This is a task page for test skills and knowledge of the candidate.</p>
+					    <ol>
+					    	<li>Use JavaScript   programming language  for front end validations.</li>
+					    	<li>Complete this 3-5 days.</li>
+					    	<li>Header, Horizontal Menu bar, content  and Footer are parts  of pages.</li>
+					    	<li>Use this form and embed   this Form in the content part of the web page.</li>
+					    	<li>Only one page is essential.</li>
+					    	<li>Colour pattern and page design is part of your development  skill  and knowledge .</li>
+					    </ol>
+					  </div>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<div class="form-group">
+								<label>Name </label><br>
+								<input class="form-control" type="text" name="name" placeholder="Your answer">
+							</div>
+						</div>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<div class="form-group">
+								<label>Email </label><br>
+								<input class="form-control" type="email" name="email" placeholder="Your answer">
+							</div>
+						</div>
+					</div>	
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<div class="form-group">
+								<label>Mobile Number </label><br>
+								<input class="form-control" type="number" name="mobile" placeholder="Your answer">
+							</div>
+						</div>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<div class="form-group">
+								<label>Address </label><br>
+								<input class="form-control" type="text" name="address" placeholder="Your answer">
+							</div>
+						</div>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<label>Gender</label><br>
+							<input type="radio" id="male" name="gender" value="male">
+							<label for="male">Male</label><br>
+						    <input type="radio" id="female" name="gender" value="female">
+							<label for="female">Female</label>
+						</div>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<div class="form-group">
+								<label>Messege </label><br>
+								<input class="form-control" type="text" name="message" placeholder="Your answer">
+							</div>
+						</div>
+					</div>
+					<div>
+						<button type="submit" class="btn">Submit</button><br><br>
+					</div>
+				</form>
+			</div>
+			<div class="col-sm-2"></div>
+		</div>	
+	</div>
+	<script>
+		function validateForm() {
+			var gender = document.forms["myForm"]["gender"];
+		    if (document.forms["myForm"]["name"].value == "") {
+		    	alert("Name must be filled out");
+		  	}
+		  	if(document.forms["myForm"]["email"].value == "") {
+		  		alert("Email must be filled out");
+		  	}
+		  	if(document.forms["myForm"]["mobile"].value == "") {
+		  		alert("Mobile must be filled out");
+		  	}
+		  	if(document.forms["myForm"]["address"].value == "") {
+		  		alert("Address must be filled out");
+		  	}
+		  	if(gender[0].checked == false && gender[1].checked == false) {
+		  		alert("Plese select your gender");
+		  	}
+		  	if(document.forms["myForm"]["message"].value == "") {
+		  		alert("Message must be filled out");
+		  	}  	
+		}
+	</script>
+</body>
+</html>
